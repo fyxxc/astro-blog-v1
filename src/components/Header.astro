@@ -7,22 +7,38 @@ import { SITE_TITLE } from '../consts';
 	<nav>
 		<h2><a href="/">{SITE_TITLE}</a></h2>
 		<div class="internal-links">
-			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/blog">Blog</HeaderLink>
-			<HeaderLink href="/about">About</HeaderLink>
+			<HeaderLink href="/">
+				<span class="sr-only">Home</span>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+					<path d="M8 .5l-6.5 6.5v8h13v-8L8 .5zm5.5 6.915V14h-3v-4H5.5v4h-3V7.415L8 2.207l5.5 5.208z"/>
+				</svg>
+			</HeaderLink>
+			<HeaderLink href="/blog">
+				<span class="sr-only">Blog</span>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+					<path d="M1 2.828c.885-.37 2.154-.828 4-.828s3.115.457 4 .828V14H1V2.828zM0 1.5v13a.5.5 0 0 0 .5.5H9V2c0-.374-.117-.69-.318-.945C8.172.402 6.79 0 5 0S1.828.402 1.318 1.055A1.538 1.538 0 0 0 1 2v-.5zM15 2a1 1 0 0 1 1 1v11.5a.5.5 0 0 1-1 0V2z"/>
+				</svg>
+			</HeaderLink>
+			<HeaderLink href="/about">
+				<span class="sr-only">About</span>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+					<path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+				</svg>
+			</HeaderLink>
 		</div>
 		<div class="social-links">
 			<a href="mailto:site@fynnhofmann.com">
-				<span class="sr-only">Schreib mir eine E-Mail</span>
-				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+				<span class="sr-only">E-Mail schreiben</span>
+				<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
 					<path d="M0 4a2 2 0 012-2h12a2 2 0 012 2v.217l-8 4.8-8-4.8V4zm0 1.383v6.617a2 2 0 002 2h12a2 2 0 002-2V5.383l-7.555 4.533a.5.5 0 01-.89 0L0 5.383z"/>
 				</svg>
 			</a>
 			<a href="https://www.linkedin.com/in/fynn-hofmann-aa7387283/" target="_blank">
-				<span class="sr-only">Folge mir auf LinkedIn</span>
-				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
-					<path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 
-					.633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 
+				<span class="sr-only">LinkedIn</span>
+				<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
+					<path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 
+					.513 16 1.146v13.708c0 .633-.526 1.146-1.175 
+					1.146H1.175C.526 16 0 15.487 0 
 					14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.21c.837 
 					0 1.356-.554 1.356-1.248-.015-.709-.519-1.248-1.342-1.248C3.06 
 					2.687 2.526 3.226 2.526 3.936c0 .694.505 1.248 1.29 
@@ -64,19 +80,20 @@ import { SITE_TITLE } from '../consts';
 		text-decoration: none;
 	}
 	nav a.active {
-		text-decoration: none;
 		border-bottom-color: var(--accent);
 	}
-	.social-links,
-	.social-links a {
+	.internal-links,
+	.social-links {
 		display: flex;
 		align-items: center;
 		gap: 0.5em;
 	}
-	.social-links svg {
+	.social-links svg,
+	.internal-links svg {
 		transition: transform 0.2s ease;
 	}
-	.social-links svg:hover {
+	.social-links svg:hover,
+	.internal-links svg:hover {
 		transform: scale(1.1);
 	}
 	@media (max-width: 720px) {
