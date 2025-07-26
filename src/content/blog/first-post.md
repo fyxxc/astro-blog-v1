@@ -2,7 +2,7 @@
 title: "Anfang der Ausbildung im Bbc"
 description: "Erster Tag im Bbc"
 pubDate: "Aug 14 2023"
-heroImage: "/IMG_8011.jpeg"
+heroImage: "/IMG_5387.jpeg"
 ---
 
 Am 14. August 2023 war mein erster Tag im Berufsbildungscentrum Bern Bbc.
