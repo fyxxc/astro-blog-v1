@@ -1,11 +1,10 @@
 ---
-title: "Anfang der Ausbildung im Bbc"
-description: "Erster Tag im Bbc"
-pubDate: "Aug 14 2023"
+title: "Abschluss des Basislehrjahres im Bbc"
+description: "Letzte Tage im Bbc"
+pubDate: "Juli 2024"
 heroImage: "/IMG_5387.jpeg"
 ---
 
-Am 14. August 2023 war mein erster Tag im Berufsbildungscentrum Bern Bbc.
+Am 11. Juli 2024 war mein letzter Tag im Bbc in Bern.
 
-An diesem Tag richteten wir unseren Arbeitsplatz mit anfangs einem Monitor, Mini-PC, Tastatur und Maus ein.
-
+Ich war ein ganzes Jahr im Bbc und habe in dieser Zeit viele neue Freunde kennengelenrt und viel Basiswissen über die Informatik bekommen.
