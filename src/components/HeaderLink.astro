@@ -1,22 +1,24 @@
-<a href="/about" class="nav-link">About</a>
+---
+import type { HTMLAttributes } from 'astro/types';
 
-<script>
-  const links = document.querySelectorAll('.nav-link');
-  const currentPath = window.location.pathname;
-  links.forEach(link => {
-    if (link.getAttribute('href') === currentPath) {
-      link.classList.add('active');
-    }
-  });
-</script>
+type Props = HTMLAttributes<'a'>;
 
+const { href, class: className, ...props } = Astro.props;
+const pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, '');
+const subpath = pathname.match(/[^\/]+/g);
+const isActive = href === pathname || href === '/' + (subpath?.[0] || '');
+---
+
+<a href={href} class:list={[className, { active: isActive }]} {...props}>
+	<slot />
+</a>
 <style>
-  a.nav-link {
-    text-decoration: none;
-    color: black;
-  }
-  a.nav-link.active {
-    font-weight: bold;
-    text-decoration: underline;
-  }
+	a {
+		display: inline-block;
+		text-decoration: none;
+	}
+	a.active {
+		font-weight: bolder;
+		text-decoration: underline;
+	}
 </style>
